@@ -1,8 +1,10 @@
 <?php
 
-    require_once 'classes/Funcionario.php';
-    require_once 'classes/Gerente.php';
-    require_once 'classes/Programador.php';
+    require_once 'autoload.php';
+    
+    use Classes\Funcionario;
+    use Classes\Gerente;
+    use Classes\Programador;
 
     $nome = $_POST['nome'];
     $salario = $_POST['salario'];
