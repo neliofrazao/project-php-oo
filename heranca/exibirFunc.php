@@ -9,13 +9,10 @@
     $cargo =  $_POST['cargo'];
     $observacao = $_POST['observacao'];
 
-    if($cargo == 1) {
-        $funcionario = new Gerente($nome, $salario, $observacao);
-        $funcionario->relatorioFunc();
-    }
-    else {
-        $funcionario = new Programador($nome, $salario, $observacao);
-        $funcionario->relatorioFunc();
-    }
+    $cargo == 1 
+        ? $funcionario = new Gerente($nome, $salario, $observacao)
+        : $funcionario = new Programador($nome, $salario, $observacao);
+
+    $funcionario->relatorioFunc();
 
 ?>

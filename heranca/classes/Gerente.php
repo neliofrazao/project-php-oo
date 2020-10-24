@@ -6,8 +6,7 @@
 
         public function __construct($nome, $salario, $projeto)
         {
-
-            parent::__construct($nome, $salario,);
+            parent::__construct($nome, $salario, $projeto);
             $this->projeto = $projeto;
         }
 
