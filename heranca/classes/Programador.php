@@ -6,10 +6,8 @@
 
         public function __construct($nome, $salario, $linguagem)
         {
-
-            parent::__construct($nome, $salario,);
+            parent::__construct($nome, $salario, $linguagem);
             $this->linguagem = $linguagem;
-
         }
 
         /**
