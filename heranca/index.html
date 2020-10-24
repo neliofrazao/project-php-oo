@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Exercício Herença</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <form action="exibirFunc.php" method="post">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="nome"
+                    id="nome"
+                    placeholder="Digite o seu nome"
+                  />
+                </div>
+                <div class="form-group">
+                    <label for="salario">Salário</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="salario"
+                      id="salario"
+                      placeholder="Digite o seu Salário"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="cargo">Cargo</label>
+                    <select class="form-control" id="cargo" name="cargo">
+                        <option value="1">Gerente</option>
+                        <option value="2">Programador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="observacao">Observação</label>
+                    <input
+                      type="text"
+                      name="observacao"
+                      class="form-control"
+                      id="observacao"
+                      placeholder="Observação"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
