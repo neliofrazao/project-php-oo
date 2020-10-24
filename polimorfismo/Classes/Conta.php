@@ -1,7 +1,7 @@
 <?php
     namespace Classes;
 
-    class Conta
+    abstract class Conta
     {
         protected $saldo;
         
@@ -30,7 +30,7 @@
             return $this;
         }
 
-        public function deposita($valor)
+        final public function deposita($valor)
         {
            $this->setSaldo($this->getSaldo() + $valor);
         }
