@@ -16,5 +16,5 @@
         : $funcionario = new Programador($nome, $salario, $observacao);
 
     $funcionario->relatorioFunc();
-
+    
 ?>
