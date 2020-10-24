@@ -35,7 +35,7 @@
         public function relatorioFunc() 
         {
             parent::relatorioFunc();
-            echo "<p> Linguagem: {$this->getLinguagem()} </p>";
+            echo "<p> Linguagem de programação: {$this->getLinguagem()} </p>";
         }
     }
 
