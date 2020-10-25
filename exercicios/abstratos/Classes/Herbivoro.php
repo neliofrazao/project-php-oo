@@ -6,7 +6,7 @@
     {
         public function habitoAlimentar() 
         {
-            echo ("<p> Animal herbívoro come: <b>{$this->getCome()}</b> </p>");
+            echo ("<p> Animal herbívoro se alimenta: <b>{$this->getCome()}</b> </p>");
         }
     }
 

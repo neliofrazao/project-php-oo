@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'autoload.php';
+    require_once '../helpers/autoload.php';
     
     use Classes\Conta;
     use Classes\Carnivoro;
