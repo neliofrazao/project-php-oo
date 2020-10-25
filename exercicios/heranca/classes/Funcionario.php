@@ -55,8 +55,8 @@
 
         public function relatorioFunc() 
         {
-            echo "<p> Nome: {$this->nome} </p>";
-            echo "<p> salário: {$this->salario} </p>";
+            echo "<p> Nome: {$this->getNome()} </p>";
+            echo "<p> salário: {$this->getSalario()} </p>";
         }
     }
 
