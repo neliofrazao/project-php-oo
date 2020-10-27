@@ -3,76 +3,36 @@
     namespace Classes;
 
     use Config\Conexao;
+    use PDO;
 
     class Cadastro extends Conexao {
         private $nome;
         private $telefone;
         private $email;
 
-        /**
-         * Get the value of nome
-         */ 
-        public function getNome()
+        protected $table = 'cadastro';
+
+        public function inserir($value)
         {
-            return $this->nome;
+            $stmt = $this
+            ->getConnect()
+            ->prepare(
+                "INSERT INTO $this->table (nome, telefone, email) VALUES (?, ?, ?)"
+            );
+            $stmt->bindParam(1, $nome, PDO::PARAM_STR);
+            $stmt->bindParam(2, $telefone, PDO::PARAM_STR);
+            $stmt->bindParam(3, $email, PDO::PARAM_STR);
+
+            $nome = $value->getNome();
+            $telefone = $value->getTelefone();
+            $email = $value->getEmail();
+
+            $stmt->execute();
         }
-
-        /**
-         * Set the value of nome
-         *
-         * @return  self
-         */ 
-        public function setNome($nome)
-        {
-            $this->nome = $nome;
-
-            return $this;
-        }
-
-        /**
-         * Get the value of telefone
-         */ 
-        public function getTelefone()
-        {
-            return $this->telefone;
-        }
-
-        /**
-         * Set the value of telefone
-         *
-         * @return  self
-         */ 
-        public function setTelefone($telefone)
-        {
-            $this->telefone = $telefone;
-
-            return $this;
-        }
-
-        /**
-         * Get the value of email
-         */ 
-        public function getEmail()
-        {
-            return $this->email;
-        }
-
-        /**
-         * Set the value of email
-         *
-         * @return  self
-         */ 
-        public function setEmail($email)
-        {
-            $this->email = $email;
-
-            return $this;
-        }
-
 
         public function exibir()
         {
-            $stmt = $this->getConnect()->query("SELECT codigo, nome, telefone, email FROM cadastro");
+            $stmt = $this->getConnect()->query("SELECT codigo, nome, telefone, email FROM $this->table");
 
             return $stmt;
         }
