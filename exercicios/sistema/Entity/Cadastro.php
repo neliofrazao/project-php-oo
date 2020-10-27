@@ -2,8 +2,21 @@
 
     namespace Entity;
     
-    class Pessoa
+    class Cadastro
     {
+        /**
+         * @var string
+         */
+        protected $nome;
+        /**
+         * @var string
+         */
+        protected $telefone;
+        /**
+         * @var string
+         */
+        protected $email;
+
        /**
          * Get the value of nome
          */ 

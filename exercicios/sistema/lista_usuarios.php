@@ -2,10 +2,9 @@
 
     require_once '../helpers/autoload.php';
     
-    use Classes\Cadastro;
+    use Controllers\CadastroController;
 
-    $cadastro = new Cadastro();
-    $tabela = $cadastro->exibir();
+    $tabela = (new CadastroController())->index();
 
     if($tabela) {
         echo "

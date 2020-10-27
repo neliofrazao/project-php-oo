@@ -1,17 +1,22 @@
 <?php
 
-    namespace Classes;
+    namespace Models;
 
-    use Config\Conexao;
+    use Models\Crud;
+    use Entity\Cadastro;
     use PDO;
 
-    class Cadastro extends Conexao {
-        private $nome;
-        private $telefone;
-        private $email;
+    class CadastroModel extends Crud {
 
         protected $table = 'cadastro';
 
+        /**
+         * Método de inserção de registro na tabela cadastro passando um objeto como parametro
+         *
+         * @author Nélio Frazão <neliofrazac@gmail.com>
+         * @param Cadastro $value
+         * @return boolean
+         */
         public function inserir($value)
         {
             $stmt = $this
@@ -29,13 +34,7 @@
 
             $stmt->execute();
         }
-
-        public function exibir()
-        {
-            $stmt = $this->getConnect()->query("SELECT codigo, nome, telefone, email FROM $this->table");
-
-            return $stmt;
-        }
+        
     }
 
 ?>
